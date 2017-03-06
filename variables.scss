@@ -1,0 +1,271 @@
+$lightmaincolor: #998675;
+$darkmaincolor: #555555;
+
+@font-face {
+  font-family: Raleway-regular sans-serif;
+  src: url('fonts/Raleway-regular.ttf')
+}
+@font-face {
+  font-family: Montserrat-Light sans-serif;
+  src: url('fonts/Montserrat-Light.ttf')
+}
+@font-face {
+  font-family: Raleway-Bold sans-serif;
+  src: url('fonts/Raleway-Bold.ttf')
+}
+@font-face {
+  font-family: Raleway-SemiBold sans-serif;
+  src: url('fonts/Raleway-SemiBold.ttf')
+}
+@font-face {
+  font-family: Roboto-Light sans-serif;
+  src: url('fonts/Roboto-Light.ttf')
+}
+
+
+@mixin big-boxes {
+  width: 100%;
+}
+
+@mixin grid {
+  width: 1230px;
+  margin: 0 auto;
+}
+
+@mixin add-flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+@mixin add-flex-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+@mixin button($button-width: 170px, $button-height: 53px, $button-line-height: 53px) {
+  border-radius: 3px;
+  background-color: $lightmaincolor;
+  box-shadow: inset 0px -3px 0px 0px $darkmaincolor;
+  width: $button-width;
+  height: $button-height;
+  font-size: 14px;
+  font-family: "Raleway-regular";
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: $button-line-height;
+
+  &:hover {
+    cursor: pointer;
+    background: #4e3427;
+    box-shadow: inset 0px -3px 0px 0px $lightmaincolor;
+  }
+}
+
+@mixin service-types() {
+  .service-logo  {
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+
+  .service-header {
+    font-size: 22px;
+    font-family: "Raleway-SemiBold";
+    color: $darkmaincolor;
+    margin: 0 auto 30px auto;
+  }
+
+  .service-text {
+    font-size: 14px;
+    font-family: "Montserrat-Light";
+    color: $darkmaincolor;
+    margin: 0 auto 30px auto;
+    text-align: center;
+  }
+
+  .service-line {
+    width: 70px;
+    border-bottom: 3px solid $darkmaincolor;
+    margin: 0 auto;
+  }
+}
+
+@mixin last-project {
+  .last-projects_project-photo {
+    width: 100%;
+    height: 237px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .last-project__black-slide {
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      display: none;
+    }
+
+    .last-project__link {
+      width: 26px;
+      height: 26px;
+      background-size: cover;
+      background: url("img/projects/link.png") no-repeat;
+      position: absolute;
+      top: 100px;
+      left: 130px;
+      display: none;
+    }
+
+    .last-project__lupa {
+      width: 25px;
+      height: 25px;
+      background: url("img/projects/lupa.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 100px;
+      left: 180px;
+      display: none;
+    }
+  }
+
+  .last-projects_project-content {
+    width: 100%;
+    height: 100px;
+    background: #fbfaf8;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: #fbfaf8;
+      transform: rotate(45deg);
+      position: absolute;
+      left: 30px;
+      top: -10px;
+    }
+
+    .project-header{
+      font-family: "Raleway-regular";
+      font-size: 20px;
+      color: $lightmaincolor;
+      margin-left: 30px;
+      margin-bottom: 15px;
+      padding-top: 30px;
+    }
+
+    .project-text {
+      font-size: 14px;
+      font-family: "Montserrat-Light";
+      color: #d1d1d1;
+      margin-left: 30px;
+    }
+  }
+}
+
+@mixin news-post {
+  .post-photo {
+    height: 220px;
+    width: 370px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .news-post__black-slide {
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      display: none;
+    }
+
+    .date {
+      width: 50px;
+      height: 60px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+
+      .day{
+        font-size: 24px;
+        font-family: "Montserrat-Light";
+        color: #fff;
+        background: #363636;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+      }
+
+      .month {
+        font-size: 16px;
+        font-family: "Roboto Light";
+        color: #fff;
+        background: #252525;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+  }
+
+  .post-content {
+    text-align: left;
+
+    .post-header {
+      font-family: "Raleway-SemiBold";
+      color: $darkmaincolor;
+      font-size: 20px;
+      padding-top: 30px;
+      padding-left: 30px;
+    }
+
+    .post-text {
+      font-size: 14px;
+      font-family: "Montserrat-Light";
+      color: $darkmaincolor;
+      margin-top: 25px;
+      padding-left: 30px;
+    }
+
+    .read-more-link {
+      font-size: 14px;
+      font-family: "Montserrat-Light";
+      color: $lightmaincolor;
+      padding-left: 30px;
+      padding-bottom: 30px;
+      margin-top: 30px;
+
+      &:after {
+        content: url("img/posts/arrow.png");
+        width: 8px;
+        height: 8px;
+        margin-left: 9px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 0;
+}

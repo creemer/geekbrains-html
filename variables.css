@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Raleway-regular sans-serif;
+  src: url("fonts/Raleway-regular.ttf");
+}
+@font-face {
+  font-family: Montserrat-Light sans-serif;
+  src: url("fonts/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: Raleway-Bold sans-serif;
+  src: url("fonts/Raleway-Bold.ttf");
+}
+@font-face {
+  font-family: Raleway-SemiBold sans-serif;
+  src: url("fonts/Raleway-SemiBold.ttf");
+}
+@font-face {
+  font-family: Roboto-Light sans-serif;
+  src: url("fonts/Roboto-Light.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 0;
+}
+
+/*# sourceMappingURL=variables.css.map */
